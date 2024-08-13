@@ -15,6 +15,8 @@ pip install setuptools==65.5.0 pip==21
 gym==0.18.0
 atari-py==0.2.6
 rlschool==0.3.1
+pip install opencv-python
+pip3 install --upgrade protobuf==3.20.1
 ```
 Attention, we may face problem when installing gym 0.18.0, please refer to the following link
 https://stackoverflow.com/questions/77124879/pip-extras-require-must-be-a-dictionary-whose-values-are-strings-or-lists-of
@@ -23,3 +25,5 @@ https://stackoverflow.com/questions/77124879/pip-extras-require-must-be-a-dictio
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
 
+3. train model
+run the train.py
