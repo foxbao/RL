@@ -20,3 +20,6 @@ Attention, we may face problem when installing gym 0.18.0, please refer to the f
 https://stackoverflow.com/questions/77124879/pip-extras-require-must-be-a-dictionary-whose-values-are-strings-or-lists-of
 
 
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+

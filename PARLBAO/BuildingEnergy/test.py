@@ -97,9 +97,13 @@ def main():
     agent.restore(save_path)
     
     
-    eval_reward = run_evaluate_episodes(agent, env, render=True)
-    logger.info('episode:{}    Test reward:{}'.format(
-        episode, eval_reward))
+    episode = 0
+    TEST_EPISODE=10
+    while episode < TEST_EPISODE:
+        eval_reward = run_evaluate_episodes(agent, env, render=True)
+        logger.info('episode:{}    Test reward:{}'.format(
+            episode, eval_reward))
+        episode += 1
     # agent.save(save_path)
 
 if __name__ == '__main__':

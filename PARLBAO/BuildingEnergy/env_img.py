@@ -4,15 +4,14 @@ import numpy as np
 import pygame
 from pygame.locals import QUIT
 
-class BuildingEnergyEnv(gym.Env):
+class BuildingEnergyImgEnv(gym.Env):
     def __init__(self):
-        super(BuildingEnergyEnv, self).__init__()
+        super(BuildingEnergyImgEnv, self).__init__()
         # 定义动作空间，假设移动范围是 -1 到 1
         self.action_space = spaces.Box(low=np.array([-1, -1]), high=np.array([1, 1]), dtype=np.float32)
         
         # 定义观测空间，包含agent和目标点的横纵向坐标
-        self.observation_space = spaces.Box(low=np.array([-10, -10, -10, -10]), 
-                                            high=np.array([10, 10, 10, 10]), dtype=np.float32)
+        self.observation_space = spaces.Box(low=0, high=255,shape=(200,200,3), dtype=np.uint8)
         
         # 初始化状态
         self.reset()
